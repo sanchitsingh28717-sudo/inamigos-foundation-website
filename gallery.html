@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery | InAmigos Foundation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 1. TOP ANNOUNCEMENT BAR -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-email">
+                <i class="fas fa-envelope"></i> support@inamigosfoundation.org.in
+            </div>
+            <div class="top-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. STICKY NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                InAmigos Foundation <span class="heart">♥</span>
+            </a>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="index.html#impact" class="nav-link">Impact</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="https://rzp.io/l/kWQ87HP" target="_blank" class="btn-donate">Donate Now</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle">
+                            <i class="fas fa-moon"></i> <span class="theme-text">Dark</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <div class="breadcrumb">Home > Gallery</div>
+            <h1>Our Gallery</h1>
+            <p class="subtitle">Moments of impact, captured forever.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery">
+        <div class="container">
+            
+            <div class="gallery-controls">
+                <button id="btn-spin" class="active"><i class="fas fa-sync-alt"></i> Spin View</button>
+                <button id="btn-grid"><i class="fas fa-th"></i> Grid View</button>
+            </div>
+
+            <!-- SPINNER VIEW -->
+            <div id="view-spin" class="spin-wrapper">
+                <div class="spin-container" id="spin-container" style="cursor: pointer;">
+                    <div class="spin-wheel" id="spin-wheel">
+                        <!-- Items injected by JS for 3D positioning -->
+                    </div>
+                </div>
+                <div class="paused-label" id="paused-label">⏸ Paused — hover out to resume</div>
+                <div class="spin-caption" id="spin-caption" style="margin-top: 20px;">Volunteer Work — Making a Difference</div>
+                <div class="spin-actions">
+                    <button id="btn-prev"><i class="fas fa-chevron-left"></i> Prev</button>
+                    <button id="btn-next">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- GRID VIEW -->
+            <div id="view-grid" class="grid-container">
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Items injected by JS -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></div>
+        <div class="lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></div>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <section class="cta-section">
+        <div class="container cta-container">
+            <span class="cta-label">MAKE A DIFFERENCE</span>
+            <h2>Want to Support a Project?</h2>
+            <p>Every contribution, big or small, helps us bring a smile to someone's face.</p>
+            <div class="cta-buttons">
+                <a href="https://rzp.io/l/kWQ87HP" target="_blank" class="btn-cta-primary">Donate Now</a>
+                <a href="https://forms.gle/AB4c1hLaDDmtrKGU7" target="_blank" class="btn-cta-outline">Volunteer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1 -->
+                <div class="footer-col brand">
+                    <a href="index.html" class="footer-logo">InAmigos Foundation</a>
+                    <p class="tagline">Empowering Lives, Building a Better India</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <!-- Col 2 -->
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Col 3 -->
+                <div class="footer-col links">
+                    <h3>Projects</h3>
+                    <ul>
+                        <li><a href="projects.html">Seva</a></li>
+                        <li><a href="projects.html">BachpanShala</a></li>
+                        <li><a href="projects.html">Jeev</a></li>
+                        <li><a href="projects.html">Udaan</a></li>
+                        <li><a href="projects.html">Prakriti</a></li>
+                        <li><a href="projects.html">Vikas</a></li>
+                    </ul>
+                </div>
+                <!-- Col 4 -->
+                <div class="footer-col contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ward No. 5, Gram Post, Sipat Ujwal Nagar, Bilaspur, Chhattisgarh — 495555</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:inamigosfoundation@gmail.com">inamigosfoundation@gmail.com</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+916267309902">+91 626 730 9902</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">&copy; 2024 InAmigos Foundation. All Rights Reserved.</div>
+                <div class="made-with">Made with ❤️ for a better India</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleText = themeToggleBtn.querySelector('.theme-text');
+        const body = document.body;
+
+        function enableDarkMode() {
+            body.classList.add('dark-mode');
+            themeToggleText.textContent = 'Light';
+            themeToggleBtn.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('theme', 'dark');
+        }
+
+        function disableDarkMode() {
+            body.classList.remove('dark-mode');
+            themeToggleText.textContent = 'Dark';
+            themeToggleBtn.querySelector('i').classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('theme', 'light');
+        }
+
+        if (localStorage.getItem('theme') === 'dark') {
+            enableDarkMode();
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (body.classList.contains('dark-mode')) {
+                disableDarkMode();
+            } else {
+                enableDarkMode();
+            }
+        });
+
+        // Gallery Data (12 local images)
+        const imagesData = [
+            { src: 'images/1690908247.jpeg', caption: 'Volunteer Work — Making a Difference' },
+            { src: 'images/1690908350.jpg', caption: 'Community Outreach — Spreading Hope' },
+            { src: 'images/1690908359.jpg', caption: 'Empowering the Future' },
+            { src: 'images/1690908369.jpg', caption: 'United for a Cause' },
+            { src: 'images/1690908380.jpg', caption: 'Smiles that Inspire' },
+            { src: 'images/1690908391.jpg', caption: 'Building a Better India' },
+            { src: 'images/1690908403.jpg', caption: 'Together We Can' },
+            { src: 'images/1690908483.jpg', caption: 'Moments of Change' },
+            { src: 'images/1690908498.jpg', caption: 'Grassroots Impact' },
+            { src: 'images/1738048982.jpg', caption: 'Driving Social Change' },
+            { src: 'images/1738054440.jpg', caption: 'Spreading Compassion' },
+            { src: 'images/1738054473.jpg', caption: 'Transforming Lives' }
+        ];
+
+        // UI toggles
+        const btnSpin = document.getElementById('btn-spin');
+        const btnGrid = document.getElementById('btn-grid');
+        const viewSpin = document.getElementById('view-spin');
+        const viewGrid = document.getElementById('view-grid');
+
+        btnSpin.addEventListener('click', () => {
+            btnSpin.classList.add('active');
+            btnGrid.classList.remove('active');
+            viewSpin.style.display = 'block';
+            viewGrid.classList.remove('active');
+        });
+
+        btnGrid.addEventListener('click', () => {
+            btnGrid.classList.add('active');
+            btnSpin.classList.remove('active');
+            viewSpin.style.display = 'none';
+            viewGrid.classList.add('active');
+        });
+
+        // ==========================
+        // Spin View Logic (Upgrade 4)
+        // ==========================
+        const spinWheel = document.getElementById('spin-wheel');
+        const spinCaption = document.getElementById('spin-caption');
+        const spinContainer = document.getElementById('spin-container');
+        const pausedLabel = document.getElementById('paused-label');
+        
+        let currentAngle = 0;
+        const angleStep = 360 / imagesData.length;
+        let isPaused = false;
+        
+        // Build wheel
+        imagesData.forEach((img, i) => {
+            const el = document.createElement('div');
+            el.className = 'spin-item';
+            // Translate Z must be larger for 12 items to prevent overlap
+            const tz = window.innerWidth < 768 ? 300 : 540; 
+            el.style.transform = `rotateY(${i * angleStep}deg) translateZ(${tz}px)`;
+            
+            const imgEl = document.createElement('img');
+            imgEl.src = img.src;
+            imgEl.alt = img.caption;
+            imgEl.loading = "lazy";
+            el.appendChild(imgEl);
+            spinWheel.appendChild(el);
+        });
+
+        function updateSpin() {
+            spinWheel.style.transform = `rotateY(${currentAngle}deg)`;
+            let normalizedAngle = currentAngle % 360;
+            if (normalizedAngle > 0) normalizedAngle -= 360;
+            let idx = Math.round(Math.abs(normalizedAngle) / angleStep) % imagesData.length;
+            spinCaption.textContent = imagesData[idx].caption;
+        }
+
+        function rotateWheel(direction) {
+            currentAngle += direction * angleStep;
+            updateSpin();
+        }
+
+        document.getElementById('btn-prev').addEventListener('click', () => rotateWheel(1));
+        document.getElementById('btn-next').addEventListener('click', () => rotateWheel(-1));
+
+        // Click to toggle pause
+        spinContainer.addEventListener('click', () => {
+            isPaused = !isPaused;
+            if (isPaused) {
+                spinContainer.classList.add('paused-ring');
+                pausedLabel.classList.add('show');
+            } else {
+                spinContainer.classList.remove('paused-ring');
+                pausedLabel.classList.remove('show');
+            }
+        });
+
+        // Mouse leave to ALWAYS resume
+        spinContainer.addEventListener('mouseleave', () => {
+            isPaused = false;
+            spinContainer.classList.remove('paused-ring');
+            pausedLabel.classList.remove('show');
+        });
+
+        // Continuous spin loop (18s for 360deg -> 1deg / 50ms)
+        setInterval(() => {
+            if (!isPaused) {
+                currentAngle -= 0.5;
+                updateSpin();
+            }
+        }, 25);
+
+        // ==========================
+        // Grid View Logic
+        // ==========================
+        const gridContainer = document.getElementById('gallery-grid');
+        
+        imagesData.forEach((img, i) => {
+            const el = document.createElement('div');
+            el.className = 'gallery-grid-item';
+            el.dataset.index = i;
+            
+            const imgEl = document.createElement('img');
+            imgEl.src = img.src;
+            imgEl.alt = img.caption;
+            imgEl.loading = "lazy";
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'gallery-overlay';
+            const span = document.createElement('span');
+            span.innerHTML = `<i class="far fa-eye"></i> View`;
+            overlay.appendChild(span);
+            
+            el.appendChild(imgEl);
+            el.appendChild(overlay);
+            gridContainer.appendChild(el);
+
+            el.addEventListener('click', () => openLightbox(i));
+        });
+
+        // ==========================
+        // Lightbox Logic
+        // ==========================
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbCaption = document.getElementById('lightbox-caption');
+        let lbCurrentIndex = 0;
+
+        function openLightbox(index) {
+            lbCurrentIndex = index;
+            updateLightbox();
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        function updateLightbox() {
+            lbImg.src = imagesData[lbCurrentIndex].src;
+            lbCaption.textContent = imagesData[lbCurrentIndex].caption;
+        }
+
+        function lbPrev() {
+            lbCurrentIndex = (lbCurrentIndex - 1 + imagesData.length) % imagesData.length;
+            updateLightbox();
+        }
+
+        function lbNext() {
+            lbCurrentIndex = (lbCurrentIndex + 1) % imagesData.length;
+            updateLightbox();
+        }
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        document.getElementById('lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); lbPrev(); });
+        document.getElementById('lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); lbNext(); });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') lbPrev();
+            if (e.key === 'ArrowRight') lbNext();
+        });
+
+    </script>
+</body>
+</html>
