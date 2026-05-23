@@ -46,11 +46,11 @@
                 <ul>
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
                     <li><a href="#impact" class="nav-link">Impact</a></li>
-                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                    <li><a href="#events" class="nav-link">Events</a></li>
-                    <li><a href="#volunteers" class="nav-link">Volunteers</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="volunteers.html" class="nav-link">Volunteers</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                     <li><a href="https://rzp.io/l/kWQ87HP" target="_blank" class="btn-donate">Donate Now</a></li>
                     <li>
@@ -548,9 +548,8 @@
                     
                     const id = entry.target.getAttribute('id');
                     
-                    // Add active class to matching nav link
-                    // Select both href="#id" and href="id.html" (for external pages if necessary)
-                    const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                    // Select both href="#id" and href="id.html" (for external pages)
+                    const activeLink = document.querySelector(`.nav-link[href="#${id}"], .nav-link[href="${id}.html"]`);
                     if (activeLink) activeLink.classList.add('nav-active');
                 }
             });
